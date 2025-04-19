@@ -1,8 +1,16 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+from supabase import create_client, Client
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 cors = CORS(app, origins='*')
+load_dotenv()
+url = "https://gmarmelbkzqbpyjdgort.supabase.co"
+key = os.getenv("API_KEY")
+supabase: Client = create_client(url, key)
+res = supabase.table("journals").select("*").order("rank", desc=False).limit(4).execute()
 
 # Sample data for the dashboard
 overview_stats = [
@@ -51,28 +59,28 @@ survival_rate_data = [
 
 recent_breakthrough_data = [
     {
-        "title": "Novel Immunotherapy Approach",
+        "title": res.data[0]["journal"],
         "date": "March 2025",
         "description": "New targeted immunotherapy shows 45% improved response in non-small cell lung cancer patients",
         "impact": "high",
         "institution": "Memorial Sloan Kettering"
     },
     {
-        "title": "Early Detection Biomarker",
+        "title": res.data[1]["journal"],
         "date": "February 2025",
         "description": "Blood test detects pancreatic cancer with 91% accuracy up to 2 years before conventional diagnosis",
         "impact": "high",
         "institution": "Johns Hopkins University"
     },
     {
-        "title": "AI-Powered Diagnostic Tool",
+        "title": res.data[2]["journal"],
         "date": "January 2025",
         "description": "Algorithm identifies subtle patterns in imaging studies, improving early detection rates by 34%",
         "impact": "medium",
         "institution": "Stanford Medical Center"
     },
     {
-        "title": "Gene Therapy Breakthrough",
+        "title": res.data[3]["journal"],
         "date": "December 2024",
         "description": "CRISPR-based approach shows promising results in targeting previously 'undruggable' cancer mutations",
         "impact": "medium",
