@@ -1,16 +1,20 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-from supabase import create_client, Client
-from dotenv import load_dotenv
-import os
+from supabase_client import supabase
+
 
 app = Flask(__name__)
 cors = CORS(app, origins='*')
-load_dotenv()
-url = "https://gmarmelbkzqbpyjdgort.supabase.co"
-key = os.getenv("API_KEY")
-supabase: Client = create_client(url, key)
-res = supabase.table("journals").select("*").order("rank", desc=False).limit(4).execute()
+
+@app.route("/api/projects", methods=['GET'])
+def get_projects():
+    try:
+        res = supabase.table("journals").select("*").order("rank", desc=False).limit(4).execute()
+        return jsonify(response.data)
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 # Sample data for the dashboard
 overview_stats = [
