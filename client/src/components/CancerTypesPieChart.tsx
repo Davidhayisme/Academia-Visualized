@@ -1,22 +1,35 @@
 import { useState, useEffect } from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import * as dotenv from 'dotenv'
 
 export default function CancerTypesPieChart() {
-  const [data, setData] = useState({
-    cancer_types_data: []
-  });
-
-  // Fetch data from Flask API using fetch
+  const [cancerData, setCancerData] = useState<{ name: string; percent: number; color: string }[]>([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/users")
-      .then((response) => response.json()) // Parse JSON response
-      .then((data) => {
-        console.log(data)
-        setData(data); // Set data to state
+    const apiUrl = import.meta.env.VITE_API_URL;
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((rawData) => {
+        let parsedData = rawData;
+
+        // If we have a 'body', it probably needs to be parsed
+        if (parsedData.body) {
+          try {
+            parsedData = JSON.parse(parsedData.body);
+          } catch (e) {
+            console.error("Failed to parse body string:", e);
+            parsedData = {};
+          }
+        }
+
+        if (parsedData && Array.isArray(parsedData.cancer_types_data)) {
+          setCancerData(parsedData.cancer_types_data);
+        } else {
+          console.error("cancer_types_data not found or not an array.");
+        }
       })
       .catch((error) => {
-        console.error("There was an error fetching the data!", error);
+        console.error("Error fetching cancer types data:", error);
       });
   }, []);
 
@@ -30,7 +43,7 @@ export default function CancerTypesPieChart() {
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
-                data={data.cancer_types_data}
+                data={cancerData}
                 cx="50%"
                 cy="50%"
                 labelLine={false}
@@ -38,13 +51,13 @@ export default function CancerTypesPieChart() {
                 fill="#8884d8"
                 dataKey="percent"
                 nameKey="name"
-                label={({ name, percent }) => `${name} ${(percent).toFixed(0)}%`}
+                label={({ name, percent }) => `${name} ${(percent ?? 0).toFixed(0)}%`}
               >
-                {data.cancer_types_data.map((item, index) => (
+                {cancerData.map((item, index) => (
                   <Cell key={`cell-${index}`} fill={item.color} />
                 ))}
               </Pie>
-              <Tooltip formatter={(value) => `${value}%`} />
+              <Tooltip formatter={(value: number) => `${value}%`} />
               <Legend layout="horizontal" verticalAlign="bottom" align="center" />
             </PieChart>
           </ResponsiveContainer>
@@ -52,4 +65,4 @@ export default function CancerTypesPieChart() {
       </CardContent>
     </Card>
   );
-};
+}

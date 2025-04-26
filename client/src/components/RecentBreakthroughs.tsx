@@ -1,26 +1,36 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { researchBreakthroughs } from "@/data/cancerData";
 
 export default function RecentBreakthroughs() {
-  const [data, setData] = useState({
-    recent_breakthrough_data: []
-  });
-
-  // Fetch data from Flask API using fetch
+  const [rdata, setrdata] = useState<{ title: string; date: string; description: string; impact: string; institution: string; }[]>([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/users")
-      .then((response) => response.json()) // Parse JSON response
-      .then((data) => {
-        console.log(data)
-        setData(data); // Set data to state
+    const apiUrl = import.meta.env.VITE_API_URL;
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((rawData) => {
+        let parsedData = rawData;
+
+        // If we have a 'body', it probably needs to be parsed
+        if (parsedData.body) {
+          try {
+            parsedData = JSON.parse(parsedData.body);
+          } catch (e) {
+            console.error("Failed to parse body string:", e);
+            parsedData = {};
+          }
+        }
+
+        if (parsedData && Array.isArray(parsedData.cancer_types_data)) {
+          setrdata(parsedData.recent_breakthrough_data);
+        } else {
+          console.error("recent_types_data not found or not an array.");
+        }
       })
       .catch((error) => {
-        console.error("There was an error fetching the data!", error);
+        console.error("Error fetching recent types data:", error);
       });
   }, []);
-
   return (
     <Card className="data-card">
       <CardHeader>
@@ -28,7 +38,7 @@ export default function RecentBreakthroughs() {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          {data.recent_breakthrough_data.map((item, index) => (
+          {rdata.map((item, index) => (
             <div
               key={index} 
               className="p-4 border border-border rounded-md hover:border-primary transition-colors"
