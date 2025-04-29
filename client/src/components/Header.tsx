@@ -15,9 +15,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const Header = () => {
-  const diseases = [
-    "Heart Disease",
+const diseases = ["Heart Disease",
     "Covid",
     "Alzheimer's",
     "Leukemia",
@@ -28,6 +26,25 @@ const Header = () => {
     "Bronchitis",
     "Liver Disease",
   ];
+
+
+const Header = () => {
+  const handleDiseaseChange = async (value: string) => {
+    try {
+      const response = await fetch("https://k42h8ikw6d.execute-api.us-east-2.amazonaws.com/DevTesting/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ disease: value }),
+      });
+      const data = await response.json();
+      console.log("Lambda response:", data);
+    } catch (error) {
+      console.error("Error sending disease to Lambda:", error);
+    }
+  };
+  
 
   return (
     <header className="flex flex-col sm:flex-row justify-between gap-4 items-center py-6">
@@ -77,17 +94,17 @@ const Header = () => {
         </Button>
       </div>
 
-      <Select>
-        <SelectTrigger className="w-[200px] glass border-medical-blue/20">
-          <SelectValue placeholder="Select disease" />
-        </SelectTrigger>
-        <SelectContent className="bg-white/95 backdrop-blur-sm border-medical-blue/20">
-          {diseases.map((disease) => (
-            <SelectItem key={disease} value={disease.toLowerCase().replace(/\s+/g, "-")}>
-              {disease}
-            </SelectItem>
-          ))}
-        </SelectContent>
+      <Select onValueChange={handleDiseaseChange}>
+  <SelectTrigger className="w-[200px] glass border-medical-blue/20">
+    <SelectValue placeholder="Select disease" />
+  </SelectTrigger>
+  <SelectContent className="bg-white/95 backdrop-blur-sm border-medical-blue/20">
+    {diseases.map((disease) => (
+      <SelectItem key={disease} value={disease.toLowerCase().replace(/\s+/g, "-")}>
+        {disease}
+      </SelectItem>
+            ))}
+          </SelectContent>
       </Select>
     </header>
   );

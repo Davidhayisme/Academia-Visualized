@@ -9,6 +9,16 @@ supabase: Client = create_client(url, key)
 res = supabase.table("journals").select("*").order("rank", desc=False).limit(4).execute()
 def lambda_handler(event, context):
     try:
+
+        body = json.loads(event.get("body", "{}"))
+        disease = body.get("disease")
+        print(f"Received disease: {disease}")
+        
+        #Supabase query logic here
+
+
+
+
         res = supabase.table("journals").select("*").order("rank", desc=False).limit(4).execute()
 
         recent_breakthrough_data = [
