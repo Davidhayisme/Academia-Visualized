@@ -26,5 +26,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "src/components/Institutions.tsx", "src/components/Yearpub.tsx", "src/components/PubsPerJournal.tsx"]
+  "include": ["src", "src/components/PubsPerInstitutions.tsx", "src/components/Yearpub.tsx", "src/components/PubsPerJournal.tsx"]
 }

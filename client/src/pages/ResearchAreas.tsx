@@ -7,6 +7,12 @@ import { generalData } from "@/data/cancerData";
 import { Button } from "react-day-picker";
 
 export default function ResearchAreas() {
+  const [selectedDisease, setSelectedDisease] = useState<string | null>(null);
+  
+    // Function to update selected disease
+    const handleDiseaseChange = (value: string) => {
+      setSelectedDisease(value); // Update the selected disease
+    };
   const [data, setData] = useState({
     research_areas_data: []
   });
@@ -27,7 +33,7 @@ export default function ResearchAreas() {
   return (
     <div className="container mx-auto px-4 py-6 max-w-7xl animate-fade-in">
       <div className="mt-6">
-        <MainNav />
+        <MainNav onDiseaseChange={handleDiseaseChange} selectedDisease={selectedDisease}/>
       </div>
       
       <main className="mt-8">

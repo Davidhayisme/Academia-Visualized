@@ -2,29 +2,37 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-export default function TopAuthors() {
-  const [rdata, setrdata] = useState<{ title: string; date: string; description: string; impact: string; institution: string; }[]>([]);
+interface OastatusProps {
+  disease: string | null;
+}
+
+export default function TopAuthors({disease}: OastatusProps) {
+  const [rdata, setrdata] = useState<{ title: string; date: string; description: string; impact:string; institution:string; }[]>([]);
   useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL+"/topjournals";
-    console.log(apiUrl)
-    fetch(apiUrl)
+    if (!disease) return;
+
+    const apiUrl = import.meta.env.VITE_API_URL + "/ta";
+
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ disease })
+    })
       .then((response) => response.json())
       .then((rawData) => {
-        console.log(rawData);
-        let parsedData = rawData;
-
-        // If we have a 'body', it probably needs to be parsed
-
-        if (parsedData && Array.isArray(parsedData.recent_breakthrough_data)) {
-          setrdata(parsedData.recent_breakthrough_data);
+        console.log(rawData)
+        if (rawData && Array.isArray(rawData.ta)) {
+          setrdata(rawData.ta);
         } else {
-          console.error("recent_types_data not found or not an array.");
+          console.error("Invalid response format from backend");
         }
       })
       .catch((error) => {
-        console.error("Error fetching recent types data:", error);
+        console.error("Error fetching OA status data:", error);
       });
-  }, []);
+  }, [disease]);
   return (
     <Card className="data-card">
       <CardHeader>

@@ -34,16 +34,14 @@ const MainNav: React.FC<MainNavProps> = ({ onDiseaseChange, selectedDisease }) =
   ];
 
   const diseases = [
-    "Heart Disease",
+    "Cancer",
+    "HeartDisease",
     "Covid",
-    "Alzheimer's",
-    "Leukemia",
+    "Alzheimers",
     "Diabetes",
     "Lymphoma",
-    "Sarcoma",
-    "Lung Cancer",
     "Bronchitis",
-    "Liver Disease",
+    "LiverDisease",
   ];
 
   return (

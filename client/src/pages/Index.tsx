@@ -82,16 +82,16 @@ const Index = () => {
             </div>
           </TabsContent>
           <TabsContent value="breakthroughs" className="mt-4 animate-fade-in">
-            <RecentBreakthroughs />
+            <RecentBreakthroughs disease={selectedDisease}/>
           </TabsContent>
           <TabsContent value="authors" className="mt-4 animate-fade-in">
-            <TopAuthors />
+            <TopAuthors disease={selectedDisease}/>
           </TabsContent>
           <TabsContent value="institutions" className="mt-4 animate-fade-in">
-            <TopInstitutions />
+            <TopInstitutions disease={selectedDisease}/>
           </TabsContent>
           <TabsContent value="papers" className="mt-4 animate-fade-in">
-            <TopPapers />
+            <TopPapers disease={selectedDisease}/>
           </TabsContent>
         </Tabs>
       </main>
