@@ -126,8 +126,9 @@ Journal_Number_Publications: (journal_name : number publications)
     Diabetes:   
         [('Diabetes Care', 15195), ('Diabetes', 9303), ('Diabetologia', 8546), ('Diabetic Medicine', 7619), ('Diabetes Research and Clinical Practice', 7088)]
     lymphoma:
+        [('Cancer', 6102), ('Leukemia & lymphoma/Leukemia and lymphoma', 5399), ('Blood', 4260), ('British Journal of Haematology', 3915), ('Journal of Clinical Oncology', 3798), ('Annals of Surgical Oncology', 2459), ('Leukemia', 2360), ('International Journal of Cancer', 2229), ('International Journal of Radiation Oncology*Biology*Physics', 2015), ('Annals of Hematology', 1847)]
 
-    Sarcoma:
+    Sarcoma:    
 
 
 
