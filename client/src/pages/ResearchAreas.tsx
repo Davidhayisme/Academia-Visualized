@@ -3,6 +3,8 @@ import React from "react";
 import Header from "@/components/Header";
 import MainNav from "@/components/MainNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { generalData } from "@/data/cancerData";
+import { Button } from "react-day-picker";
 
 export default function ResearchAreas() {
   const [data, setData] = useState({
@@ -31,25 +33,59 @@ export default function ResearchAreas() {
       
       <main className="mt-8">
         <section>
-          <h2 className="text-xl font-bold mb-4 text-medical-blue">Research Areas</h2>
-          <p className="text-muted-foreground mb-6">Explore the key focus areas driving cancer research forward</p>
+          <h2 className="text-xl font-bold mb-4 text-medical-blue">Disease Overview</h2>
+          <p className="text-muted-foreground mb-6">Data is based on general guidelines with all quantitative data based metrics from 2024 or earlier.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.research_areas_data.map((area, index) => (
+            {generalData.map((disease, index) => (
               <Card key={index} className="data-card">
                 <CardHeader>
-                  <CardTitle className="text-lg text-medical-blue">{area.title}</CardTitle>
+                  <CardTitle className="text-lg text-medical-blue">{disease.diseaseName}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm mb-4">{area.description}</p>
                   <div className="flex justify-between text-sm">
                     <span>
-                      <span className="font-medium">{area.projects}</span> active projects
+                      Cases: <span className="font-medium">{disease.cases}</span>
                     </span>
                     <span>
-                      <span className="font-medium">{area.institutions}</span> institutions
+                      Articles: <span className="font-medium">{disease.researchStats}</span>
                     </span>
                   </div>
+                  <br></br>
+                  <div className="flex justify-between text-sm">
+                    <span>
+                      Type: <span className="font-medium">{disease.type}</span>
+                    </span>
+                    <span>
+                      Frequency: <span className="font-medium">{disease.rarity}</span>
+                    </span>
+                  </div>
+                  <br></br>
+                  <div className="flex justify-between text-sm">
+                    <span>
+                      Ages: <span className="font-medium">{disease.age}</span>
+                    </span>
+                    <span>
+                      Gender: <span className="font-medium">{disease.gender}</span>
+                    </span>
+                  </div>
+                  <br></br>
+                  <div className="flex justify-between text-sm">
+                    <span>
+                      Preventable: <span className="font-medium">{disease.preventable}</span>
+                    </span>
+                    <span>
+                      Curable: <span className="font-medium">{disease.curable}</span>
+                    </span>
+                  </div>
+                  <br></br>
+                  <div className="flex justify-between text-sm">
+                    <span>
+                      Infectious: <span className="font-medium">{disease.infectious}</span>
+                    </span>
+                  </div>
+                  <footer className="mt-6 border-t border-border pt-6 pb-0 text-center text-sm text-muted-foreground"></footer>
+                  <p className="text-sm mb-4">{disease.description}</p>
                 </CardContent>
               </Card>
             ))}
