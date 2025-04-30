@@ -18,6 +18,7 @@ import TopInstitutions from "@/components/TopInstitutions";
 import TopPapers from "@/components/TopPapers";
 import Ppi from "@/components/PubsPerInstitutions";
 import Cpi from "@/components/CitationsPerInstitution";
+import ACitations from "@/components/AuthorsCitations";
 
 // Import other components here as needed
 
@@ -69,7 +70,7 @@ const Index = () => {
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Authors</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <NumberofAuthorsPerDisease />
-              <SurvivalRateTrend />
+              <ACitations disease={selectedDisease}/>
             </div>
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Papers</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

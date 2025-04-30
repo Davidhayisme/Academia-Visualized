@@ -14,8 +14,8 @@ interface OastatusProps {
   disease: string | null;
 }
 
-export default function Oastatus({ disease }: OastatusProps) {
-  const [rdata, setrdata] = useState<{ name: string; value: number }[]>([]);
+export default function ACitations({ disease }: OastatusProps) {
+  const [rdata, setrdata] = useState<{ name: string; number: number }[]>([]);
 
   useEffect(() => {
     if (!disease) return;
@@ -64,8 +64,8 @@ export default function Oastatus({ disease }: OastatusProps) {
                   position: "insideLeft"
                 }}
               />
-              <Tooltip formatter={(value) => [`${value} trials`, "Count"]} />
-              <Bar dataKey="value" fill="#553C9A" radius={[5, 5, 0, 0]} />
+              <Tooltip formatter={(number) => [`${number} trials`, "Count"]} />
+              <Bar dataKey="number" fill="#553C9A" radius={[5, 5, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
