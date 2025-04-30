@@ -1,0 +1,148 @@
+top authors: (openalexid , author name , number_publications, number_citations)
+    sarcoma: 
+        #[('https://openalex.org/A5075518419', 'Murray F. Brennan', 261, Decimal('35602')), ('https://openalex.org/A5042202815', 'Jean‐Yves Blay', 364, Decimal('34944')), ('https://openalex.org/A5050651568', 'Christopher D.�M. Fletcher', 255, Decimal('34255')), ('https://openalex.org/A5031195893', 'Julian P. T. Higgins', 5, Decimal('31955')), ('https://openalex.org/A5103553598', 'Simon G. Thompson', 1, Decimal('31864'))]
+
+    bronchitis:
+        #[('https://openalex.org/A5010278392', 'Leonardo M. Fabbri', 34, Decimal('5023')), ('https://openalex.org/A5059577678', 'Marina Saetta', 21, Decimal('4912')), ('https://openalex.org/A5108399330', 'Cristina E. Mapp', 17, Decimal('4341')), ('https://openalex.org/A5105301527', 'Piero Maestrelli', 20, Decimal('4299')), ('https://openalex.org/A5030694232', 'Mark W. Jackwood', 63, Decimal('4136'))]
+
+    diabetes:
+        #[('https://openalex.org/A5019887736', 'Paul Zimmet', 494, Decimal('110409')), ('https://openalex.org/A5056459536', 'Frank B. Hu', 494, Decimal('97878')), ('https://openalex.org/A5040182038', 'John B. Buse', 393, Decimal('91754')), ('https://openalex.org/A5035897807', 'John M. Lachin', 220, Decimal('90277')), ('https://openalex.org/A5024475260', 'Jonathan E. Shaw', 367, Decimal('87216'))]
+
+    lymphoma:
+        #[('https://openalex.org/A5089779163', 'Elaine S. Jaffe', 574, Decimal('99048')), ('https://openalex.org/A5031758990', 'Randy D. Gascoyne', 439, Decimal('91840')), ('https://openalex.org/A5001449157', 'Todd R. Golub', 27, Decimal('75872')), ('https://openalex.org/A5022658681', 'Joseph M. Connors', 334, Decimal('74930')), ('https://openalex.org/A5029161067', 'Elı́as Campo', 442, Decimal('68302'))]
+
+    covid:
+        #[('https://openalex.org/A5100655339', 'Ting Yu', 9, Decimal('116883')), ('https://openalex.org/A5100613209', 'Bin Cao', 71, Decimal('96690')), ('https://openalex.org/A5011461272', 'Christian Drosten', 252, Decimal('96671')), ('https://openalex.org/A5024929222', 'Jiaan Xia', 10, Decimal('96234')), ('https://openalex.org/A5062226704', 'Jiuyang Xu', 26, Decimal('93502'))]
+    
+    Alzheimers:
+        [('https://openalex.org/A5063630764', 'John C. Morris', 816, Decimal('165269')), ('https://openalex.org/A5021394368', 'John Q. Trojanowski', 679, Decimal('144727')), ('https://openalex.org/A5025313057', 'Kaj Blennow', 1208, Decimal('142556')), ('https://openalex.org/A5005099850', 'Clifford R. Jack', 715, Decimal('140864')), ('https://openalex.org/A5025870220', 'Philip Scheltens', 893, Decimal('138374'))]
+
+    Cancer:
+
+OA Categories: 
+    Bronchitis:
+        # [('bronze', 2318), ('closed', 19377), ('diamond', 73), ('gold', 799), ('green', 823), ('hybrid', 307)]
+    Covid:
+        # [('bronze', 36200), ('closed', 48336), ('diamond', 8367), ('gold', 89188), ('green', 47462), ('hybrid', 41241)]
+    Alzheimer's:
+        # [('bronze', 22026), ('closed', 126549), ('diamond', 778), ('gold', 28870), ('green', 25735), ('hybrid', 17069)]
+    Diabetes:
+        # [('bronze', 70844), ('closed', 299767), ('diamond', 4496), ('gold', 65482), ('green', 29647), ('hybrid', 24049)]
+    Lymphoma:
+        # [('bronze', 45750), ('closed', 254411), ('diamond', 1491), ('gold', 25836), ('green', 15958), ('hybrid', 11436)]
+    Sarcoma:
+        # [('bronze', 16899), ('closed', 116311), ('diamond', 687), ('gold', 10469), ('green', 7668), ('hybrid', 3864)]
+    Cancer:
+
+publications by year:
+    Covid:
+        # [(Decimal('1990'), 14), (Decimal('1991'), 9), (Decimal('1992'), 25), (Decimal('1993'), 48), (Decimal('1994'), 138), (Decimal('1995'), 149), (Decimal('1996'), 89), (Decimal('1997'), 106), (Decimal('1998'), 138), (Decimal('1999'), 106), (Decimal('2000'), 108), (Decimal('2001'), 146), (Decimal('2002'), 97), (Decimal('2003'), 231), (Decimal('2004'), 329), (Decimal('2005'), 336), (Decimal('2006'), 382), (Decimal('2007'), 260), (Decimal('2008'), 255), (Decimal('2009'), 248), (Decimal('2010'), 215), (Decimal('2011'), 191), (Decimal('2012'), 252), (Decimal('2013'), 386), (Decimal('2014'), 509), (Decimal('2015'), 598), (Decimal('2016'), 550), (Decimal('2017'), 487), (Decimal('2018'), 444), (Decimal('2019'), 548), (Decimal('2020'), 49256), (Decimal('2021'), 69529), (Decimal('2022'), 69634), (Decimal('2023'), 44799), (Decimal('2024'), 27073), (Decimal('2025'), 3060)]
+    Bronchitis:
+        # [(Decimal('1990'), 460), (Decimal('1991'), 394), (Decimal('1992'), 335), (Decimal('1993'), 297), (Decimal('1994'), 283), (Decimal('1995'), 273), (Decimal('1996'), 276), (Decimal('1997'), 279), (Decimal('1998'), 316), (Decimal('1999'), 278), (Decimal('2000'), 341), (Decimal('2001'), 347), (Decimal('2002'), 265), (Decimal('2003'), 270), (Decimal('2004'), 298), (Decimal('2005'), 269), (Decimal('2006'), 288), (Decimal('2007'), 267), (Decimal('2008'), 259), (Decimal('2009'), 222), (Decimal('2010'), 230), (Decimal('2011'), 232), (Decimal('2012'), 245), (Decimal('2013'), 229), (Decimal('2014'), 225), (Decimal('2015'), 250), (Decimal('2016'), 215), (Decimal('2017'), 203), (Decimal('2018'), 185), (Decimal('2019'), 195), (Decimal('2020'), 162), (Decimal('2021'), 149), (Decimal('2022'), 224), (Decimal('2023'), 170), (Decimal('2024'), 142), (Decimal('2025'), 18)]
+    Alzheimer's:
+        # [(Decimal('1990'), 1794), (Decimal('1991'), 1972), (Decimal('1992'), 1911), (Decimal('1993'), 1963), (Decimal('1994'), 2401), (Decimal('1995'), 2457), (Decimal('1996'), 2641), (Decimal('1997'), 2993), (Decimal('1998'), 3094), (Decimal('1999'), 3189), (Decimal('2000'), 3568), (Decimal('2001'), 3717), (Decimal('2002'), 4160), (Decimal('2003'), 4326), (Decimal('2004'), 4764), (Decimal('2005'), 4747), (Decimal('2006'), 5074), (Decimal('2007'), 5039), (Decimal('2008'), 5490), (Decimal('2009'), 5893), (Decimal('2010'), 6218), (Decimal('2011'), 6609), (Decimal('2012'), 6913), (Decimal('2013'), 7386), (Decimal('2014'), 7668), (Decimal('2015'), 7929), (Decimal('2016'), 8509), (Decimal('2017'), 8715), (Decimal('2018'), 9209), (Decimal('2019'), 9828), (Decimal('2020'), 9527), (Decimal('2021'), 10436), (Decimal('2022'), 12406), (Decimal('2023'), 12646), (Decimal('2024'), 11396), (Decimal('2025'), 1265)]
+    Diabetes:
+        # [(Decimal('1990'), 4638), (Decimal('1991'), 4614), (Decimal('1992'), 4639), (Decimal('1993'), 4825), (Decimal('1994'), 4899), (Decimal('1995'), 4917), (Decimal('1996'), 5293), (Decimal('1997'), 5801), (Decimal('1998'), 5851), (Decimal('1999'), 6185), (Decimal('2000'), 6559), (Decimal('2001'), 7244), (Decimal('2002'), 8480), (Decimal('2003'), 8950), (Decimal('2004'), 9825), (Decimal('2005'), 10519), (Decimal('2006'), 11028), (Decimal('2007'), 11270), (Decimal('2008'), 12573), (Decimal('2009'), 13314), (Decimal('2010'), 13662), (Decimal('2011'), 14351), (Decimal('2012'), 15146), (Decimal('2013'), 16105), (Decimal('2014'), 16770), (Decimal('2015'), 17047), (Decimal('2016'), 17393), (Decimal('2017'), 16692), (Decimal('2018'), 17158), (Decimal('2019'), 17348), (Decimal('2020'), 16967), (Decimal('2021'), 18752), (Decimal('2022'), 22828), (Decimal('2023'), 21980), (Decimal('2024'), 15908), (Decimal('2025'), 1872)]
+    Lymphoma:
+        # [(Decimal('1990'), 5211), (Decimal('1991'), 5015), (Decimal('1992'), 5212), (Decimal('1993'), 5185), (Decimal('1994'), 5427), (Decimal('1995'), 5544), (Decimal('1996'), 5657), (Decimal('1997'), 5765), (Decimal('1998'), 5831), (Decimal('1999'), 5898), (Decimal('2000'), 6433), (Decimal('2001'), 6364), (Decimal('2002'), 6778), (Decimal('2003'), 7314), (Decimal('2004'), 7157), (Decimal('2005'), 7739), (Decimal('2006'), 7842), (Decimal('2007'), 8204), (Decimal('2008'), 8735), (Decimal('2009'), 8438), (Decimal('2010'), 8934), (Decimal('2011'), 9499), (Decimal('2012'), 9543), (Decimal('2013'), 10051), (Decimal('2014'), 10195), (Decimal('2015'), 10565), (Decimal('2016'), 9581), (Decimal('2017'), 9140), (Decimal('2018'), 9243), (Decimal('2019'), 9067), (Decimal('2020'), 7519), (Decimal('2021'), 7860), (Decimal('2022'), 8085), (Decimal('2023'), 7627), (Decimal('2024'), 6447), (Decimal('2025'), 690)]
+    Sarcoma
+        # [(Decimal('1990'), 2369), (Decimal('1991'), 2327), (Decimal('1992'), 2223), (Decimal('1993'), 2334), (Decimal('1994'), 2299), (Decimal('1995'), 2489), (Decimal('1996'), 2499), (Decimal('1997'), 2523), (Decimal('1998'), 2508), (Decimal('1999'), 2469), (Decimal('2000'), 2499), (Decimal('2001'), 2494), (Decimal('2002'), 2509), (Decimal('2003'), 2738), (Decimal('2004'), 2702), (Decimal('2005'), 2859), (Decimal('2006'), 2769), (Decimal('2007'), 2878), (Decimal('2008'), 2927), (Decimal('2009'), 2908), (Decimal('2010'), 2979), (Decimal('2011'), 3119), (Decimal('2012'), 3024), (Decimal('2013'), 3262), (Decimal('2014'), 3439), (Decimal('2015'), 3493), (Decimal('2016'), 3150), (Decimal('2017'), 3220), (Decimal('2018'), 3270), (Decimal('2019'), 3300), (Decimal('2020'), 2894), (Decimal('2021'), 3062), (Decimal('2022'), 3497), (Decimal('2023'), 3072), (Decimal('2024'), 2479), (Decimal('2025'), 302)]
+    Cancer:
+
+
+Total publications:
+    #cancer - 16,367,730
+    #Covid - 782,275
+    #Alzheimers - 579,911
+    #Diabetes - 1,317,868
+    #Lymphoma - 998,205
+    #Sarcoma - 454,889
+    #Bronchitis - 55,699
+    #Liver Disease - 4,453,040
+    #Heart disease - 6,205,420
+
+
+
+
+
+Top5 papers: (openalex_id , article title, citation number, )
+    sarcoma:
+        #[('https://openalex.org/W2126930838', 'Quantifying heterogeneity in a meta‐analysis', Decimal('31864')), ('https://openalex.org/W2032438721', "Identification of Herpesvirus-Like DNA Sequences in AIDS-Sssociated Kaposi's Sarcoma", Decimal('5650')), ('https://openalex.org/W2057123987', 'An endotoxin-induced serum factor that causes necrosis of tumors.', Decimal('4539')), ('https://openalex.org/W2014495927', 'Direct Gene Transfer into Mouse Muscle in Vivo', Decimal('4025')), ('https://openalex.org/W2012108057', 'Platinum Compounds: a New Class of Potent Antitumour Agents', Decimal('3802'))]
+
+    bronchitis:
+        #[('https://openalex.org/W1969235931', 'INFANT MORTALITY, CHILDHOOD NUTRITION, AND ISCHAEMIC HEART DISEASE IN ENGLAND AND WALES', Decimal('2753')), ('https://openalex.org/W2136464549', 'Estimating regression models with unknown break‐points', Decimal('1903')), ('https://openalex.org/W2319554819', 'Site and Nature of Airway Obstruction in Chronic Obstructive Lung Disease', Decimal('1363')), ('https://openalex.org/W1983538981', 'A Human Syndrome Caused by Immotile Cilia', Decimal('1248')), ('https://openalex.org/W2039252747', 'Mast-Cell Infiltration of Airway Smooth Muscle in Asthma', Decimal('1230'))]
+
+    diabetes:
+        #[('https://openalex.org/W2160234571', 'Homeostasis model assessment: insulin resistance and ?-cell function from fasting plasma glucose and insulin concentrations in man', Decimal('30015')), ('https://openalex.org/W3009885589', 'Clinical course and risk factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort study', Decimal('27679')), ('https://openalex.org/W2769264260', 'The Effect of Intensive Treatment of Diabetes on the Development and Progression of Long-Term Complications in Insulin-Dependent Diabetes Mellitus', Decimal('23731')), ('https://openalex.org/W2427094903', '2016 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure', Decimal('19131')), ('https://openalex.org/W2158822657', 'Reduction in the Incidence of Type 2 Diabetes with Lifestyle Intervention or Metformin', Decimal('18281'))]
+
+    lymphoma:
+        #[('https://openalex.org/W2114918609', 'Rapid colorimetric assay for cellular growth and survival: Application to proliferation and cytotoxicity assays', Decimal('53330')), ('https://openalex.org/W2130410032', 'Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles', Decimal('45777')), ('https://openalex.org/W2572174216', 'Adverse Renal Effects of Immune Checkpoint Inhibitors: A Narrative Review', Decimal('14988')), ('https://openalex.org/W2109363337', 'Molecular Classification of Cancer: Class Discovery and Class Prediction by Gene Expression Monitoring', Decimal('11623')), ('https://openalex.org/W2159707944', 'GSVA: gene set variation analysis for microarray and RNA-Seq data', Decimal('10849'))]
+    
+    covid:
+        #[('https://openalex.org/W3001118548', 'Clinical features of patients infected with 2019 novel coronavirus in Wuhan, China', Decimal('49402')), ('https://openalex.org/W3008827533', 'Clinical Characteristics of Coronavirus Disease 2019 in China', Decimal('28935')), ('https://openalex.org/W3001897055', 'A Novel Coronavirus from Patients with Pneumonia in China, 2019', Decimal('28837')), ('https://openalex.org/W3009885589', 'Clinical course and risk factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort study', Decimal('27679')), ('https://openalex.org/W3004280078', 'A pneumonia outbreak associated with a new coronavirus of probable bat origin', Decimal('22024'))]
+    
+    Alzeihmers:
+        [('https://openalex.org/W1847168837', '“Mini-mental state”', Decimal('83427')), ('https://openalex.org/W2156220037', "Clinical diagnosis of Alzheimer's disease", Decimal('27429')), ('https://openalex.org/W2165758561', 'The Montreal Cognitive Assessment, MoCA: A Brief Screening Tool For Mild Cognitive Impairment', Decimal('20695')), ('https://openalex.org/W2058161128', 'Normative data on a battery of neuropsychological tests in the Han Chinese population', Decimal('20472')), ('https://openalex.org/W2148080316', 'Special Care Units and Traditional Care in Dementia: Relationship with Behavior, Cognition, Functional Status and Quality of Life - A Review', Decimal('20231'))]
+    
+    Cancer:
+
+
+
+Top Institutions by citations: (openalexid , institution name, publication number, citation number)
+    Bronchitis:
+        [('https://openalex.org/I2801388914', 'Southampton General Hospital', 9, Decimal('3565')), ('https://openalex.org/I43439940', 'University of Southampton', 9, Decimal('3336')), ('https://openalex.org/I2802542264', 'University Hospital of Basel', 1, Decimal('2182')), ('https://openalex.org/I900890020', 'University of Palermo', 4, Decimal('2054')), ('https://openalex.org/I4210087413', 'University of Colorado Health', 5, Decimal('1952')), ('https://openalex.org/I141945490', 'University of British Columbia', 14, Decimal('1930')), ('https://openalex.org/I4210096640', 'Royal Brompton Hospital', 34, Decimal('1891')), ('https://openalex.org/I4210138501', 'Chinese Academy of Agricultural Sciences', 34, Decimal('1631')), ('https://openalex.org/I47508984', 'Imperial College London', 12, Decimal('1503')), ('https://openalex.org/I4210099160', 'Centro de Investigación Biomédica en Red de Enfermedades Respiratorias', 15, Decimal('1355'))]
+    Covid
+        [('https://openalex.org/I154526488', 'Inserm', 1124, Decimal('245577')), ('https://openalex.org/I200296433', 'Chinese Academy of Medical Sciences & Peking Union Medical College', 770, Decimal('200655')), ('https://openalex.org/I204730241', 'Université Paris Cité', 495, Decimal('188728')), ('https://openalex.org/I83399316', 'Rockefeller University', 74, Decimal('184924')), ('https://openalex.org/I4210165077', 'Institut des Maladies Génétiques Imagine', 27, Decimal('160511')), ('https://openalex.org/I40120149', 'University of Oxford', 1051, Decimal('154811')), ('https://openalex.org/I37461747', 'Wuhan University', 581, Decimal('154139')), ('https://openalex.org/I136199984', 'Harvard University', 2042, Decimal('145970')), ('https://openalex.org/I47720641', 'Huazhong University of Science and Technology', 797, Decimal('141975')), ('https://openalex.org/I99065089', 'Tsinghua University', 305, Decimal('129789'))]
+    Alzheimer's
+        [('https://openalex.org/I136199984', 'Harvard University', 1475, Decimal('185605')), ('https://openalex.org/I45129253', 'University College London', 1487, Decimal('128064')), ('https://openalex.org/I154526488', 'Inserm', 1157, Decimal('113483')), ('https://openalex.org/I145311948', 'Johns Hopkins University', 925, Decimal('100711')), ('https://openalex.org/I180670191', 'University of California, San Francisco', 939, Decimal('98580')), ('https://openalex.org/I204465549', 'Washington University in St. Louis', 654, Decimal('97035')), ('https://openalex.org/I4210087915', 'Massachusetts General Hospital', 793, Decimal('96893')), ('https://openalex.org/I79576946', 'University of Pennsylvania', 752, Decimal('93866')), ('https://openalex.org/I36258959', 'University of California, San Diego', 743, Decimal('85549')), ('https://openalex.org/I1283280774', "Brigham and Women's Hospital", 507, Decimal('83725'))]
+    Diabetes:
+        [('https://openalex.org/I136199984', 'Harvard University', 2762, Decimal('297968')), ('https://openalex.org/I1283280774', "Brigham and Women's Hospital", 1110, Decimal('123457')), ('https://openalex.org/I40120149', 'University of Oxford', 710, Decimal('103957')), ('https://openalex.org/I41169824', 'International Diabetes Federation', 59, Decimal('96427')), ('https://openalex.org/I154526488', 'Inserm', 1526, Decimal('92205')), ('https://openalex.org/I185261750', 'University of Toronto', 1459, Decimal('86055')), ('https://openalex.org/I241749', 'University of Cambridge', 646, Decimal('78996')), ('https://openalex.org/I27837315', 'University of Michigan–Ann Arbor', 944, Decimal('75618')), ('https://openalex.org/I201448701', 'University of Washington', 860, Decimal('73815')), ('https://openalex.org/I145311948', 'Johns Hopkins University', 1015, Decimal('72521'))]
+    lymphoma:
+        [('https://openalex.org/I136199984', 'Harvard University', 1066, Decimal('114793')), ('https://openalex.org/I1343551460', 'The University of Texas MD Anderson Cancer Center', 1400, Decimal('91385')), ('https://openalex.org/I154526488', 'Inserm', 917, Decimal('80776')), ('https://openalex.org/I1334819555', 'Memorial Sloan Kettering Cancer Center', 1104, Decimal('76330')), ('https://openalex.org/I4210140884', 'National Cancer Institute', 710, Decimal('60161')), ('https://openalex.org/I4210117453', 'Dana-Farber Cancer Institute', 475, Decimal('59174')), ('https://openalex.org/I4210087915', 'Massachusetts General Hospital', 498, Decimal('54877')), ('https://openalex.org/I4210150520', 'Cellular Research (United States)', 4, Decimal('53354')), ('https://openalex.org/I97018004', 'Stanford University', 646, Decimal('51490')), ('https://openalex.org/I1299303238', 'National Institutes of Health', 478, Decimal('46221'))]
+    Sarcoma
+        [('https://openalex.org/I136199984', 'Harvard University', 624, Decimal('53636')), ('https://openalex.org/I1334819555', 'Memorial Sloan Kettering Cancer Center', 583, Decimal('48435')), ('https://openalex.org/I1343551460', 'The University of Texas MD Anderson Cancer Center', 573, Decimal('36573')), ('https://openalex.org/I4210140884', 'National Cancer Institute', 384, Decimal('33877')), ('https://openalex.org/I1283280774', "Brigham and Women's Hospital", 263, Decimal('29756')), ('https://openalex.org/I1299303238', 'National Institutes of Health', 231, Decimal('25117')), ('https://openalex.org/I4210087915', 'Massachusetts General Hospital', 360, Decimal('24681')), ('https://openalex.org/I154526488', 'Inserm', 338, Decimal('20788')), ('https://openalex.org/I1330342723', 'Mayo Clinic', 249, Decimal('15912')), ('https://openalex.org/I145311948', 'Johns Hopkins University', 219, Decimal('15138'))]
+        Ran in 167.66896557807922 seconds
+    Cancer:
+
+
+Top Institutions by publications: (openalexid , institution name, publication number, citation number)
+     
+
+Number authors
+    Bronchitis:
+        53937
+    Covid:
+        1075978
+    Alzheimer's:
+        469147
+    Diabetes:
+
+    lymphoma:
+
+    Sarcoma:
+
+    cancer:
+
+
+Journal_Number_Publications: (journal_name : number publications)
+    Bronchitis: 
+        [('CHEST Journal', 378), ('Thorax', 375), ('Avian Diseases', 316), ('BMJ', 279), ('American Journal of Respiratory and Critical Care Medicine', 203)]
+    Covid:
+        [('PLoS ONE', 7300), ('International Journal of Environmental Research and Public Health', 6989), ('Scientific Reports', 4840), ('Frontiers in Public Health', 4512), ('Frontiers in Immunology', 2847)]
+    Alzheimer's:
+        [('Journal of Alzheimer s Disease', 8106), ('Alzheimer s & Dementia', 4015), ('Neurology', 3992), ('Neurobiology of Aging', 3556), ('Journal of the American Geriatrics Society', 2569)]
+    Diabetes:   
+        [('Diabetes Care', 15195), ('Diabetes', 9303), ('Diabetologia', 8546), ('Diabetic Medicine', 7619), ('Diabetes Research and Clinical Practice', 7088)]
+    lymphoma:
+
+    Sarcoma:
+
+    Cancer:
+
+
+
+
+Journal_Number_Citations: (journal_name : citations)
+
+
+
