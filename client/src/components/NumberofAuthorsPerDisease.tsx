@@ -55,7 +55,7 @@ export default function NumberofAuthorsPerDisease() {
                 angle: -90,
                 position: "insideLeft" 
               }} />
-              <Tooltip formatter={(value) => [`${value} trials`, "Count"]} />
+              <Tooltip formatter={(value) => [`${value} authors`, "Count"]} />
               <Bar dataKey="value" fill="#553C9A" radius={[8, 8, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
