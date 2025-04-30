@@ -11,28 +11,20 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function NumberofAuthorsPerDisease() {
+  const [data, setData] = useState({
+    authors: []
+  });
 
   // Fetch data from Flask API using fetch
-  const [rdata, setrdata] = useState<{ name: string; value: Number}[]>([]);
   useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL+"/topinst";
-    console.log(apiUrl)
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((rawData) => {
-        console.log(rawData);
-        let parsedData = rawData;
-
-        // If we have a 'body', it probably needs to be parsed
-
-        if (parsedData && Array.isArray(parsedData.authors)) {
-          setrdata(parsedData.authors);
-        } else {
-          console.error("recent_types_data not found or not an array.");
-        }
+    fetch("http://localhost:5000/api/users")
+      .then((response) => response.json()) // Parse JSON response
+      .then((data) => {
+        console.log(data)
+        setData(data); // Set data to state
       })
       .catch((error) => {
-        console.error("Error fetching recent types data:", error);
+        console.error("There was an error fetching the data!", error);
       });
   }, []);
 
@@ -45,7 +37,7 @@ export default function NumberofAuthorsPerDisease() {
         <div className="h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
-              data={rdata}
+              data={data.authors}
               margin={{ top: 5, right: 5, left: 5, bottom: 50}}
             >
               <CartesianGrid strokeDasharray="3 3" />

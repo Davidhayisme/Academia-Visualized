@@ -47,6 +47,19 @@ clinical_trials_data = [
     {"name": "Phase 5", "value": 190}
 ]
 
+authors = [
+    {"name":"COVID-19", "value": 125},
+    {"name":"Influenza", "value": 80},
+    {"name":"Malaria", "value": 95},
+    {"name":"Tuberculosis", "value": 110},
+    {"name":"HIV/AIDS", "value": 130},
+    {"name":"Diabetes", "value": 70},
+    {"name":"Cancer", "value": 150},
+    {"name":"Heart Disease", "value": 140},
+    {"name":"Asthma", "value": 60},
+    {"name":"Alzheimer's", "value": 50},
+]
+
 survival_rate_data = [
     {"year": "1990", "rate": 58},
     {"year": "1995", "rate": 62},
@@ -137,7 +150,8 @@ def get_cancer_data():
         "clinical_trials_data": clinical_trials_data,
         "research_funding_data": research_funding_data,
         "cancer_types_data": cancer_types_data,
-        "overview_stats": overview_stats
+        "overview_stats": overview_stats,
+        "authors": authors
     })
 
 if __name__ == "__main__":

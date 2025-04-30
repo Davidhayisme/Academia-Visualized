@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import Header from "@/components/Header";
 import MainNav from "@/components/MainNav";
 import KeyStatistics from "@/components/KeyStatistics";
@@ -9,15 +9,29 @@ import ClinicalTrialsChart from "@/components/ClinicalTrialsChart";
 import NumberofAuthorsPerDisease from "@/components/NumberofAuthorsPerDisease";
 import SurvivalRateTrend from "@/components/SurvivalRateTrend";
 import RecentBreakthroughs from "@/components/RecentBreakthroughs";
+import Oastatus from "@/components/OAStatus";
+import Cpj from "@/components/CitsPerJournal";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Sparkles } from "lucide-react";
+import Yearpub from "@/components/Yearpub";
+import PubsPer from "@/components/PubsPerJournal";
+import TopAuthors from "@/components/TopAuthors";
+import TopInstitutions from "@/components/TopInstitutions";
+import TopPapers from "@/components/TopPapers";
+
+// Import other components here as needed
 
 const Index = () => {
+  const [selectedDisease, setSelectedDisease] = useState<string | null>(null);
+
+  // Function to update selected disease
+  const handleDiseaseChange = (value: string) => {
+    setSelectedDisease(value); // Update the selected disease
+  };
+
   return (
     <div className="container mx-auto px-4 py-6 max-w-7xl animate-fade-in">
-      <div className="mt-6">
-        <MainNav />
-      </div>
+      <MainNav onDiseaseChange={handleDiseaseChange} selectedDisease={selectedDisease} />
       
       <main className="mt-8">
         <section className="mb-6 relative group">
@@ -33,29 +47,32 @@ const Index = () => {
         </section>
 
         <Tabs defaultValue="charts" className="mb-8">
-          <TabsList className="grid w-full grid-cols-2 backdrop-blur-sm bg-white/50">
+          <TabsList className="grid w-full grid-cols-5 backdrop-blur-sm bg-white/50">
             <TabsTrigger value="charts" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-medical-blue/80 data-[state=active]:to-medical-teal/80 data-[state=active]:text-white transition-all duration-300">Research Charts</TabsTrigger>
-            <TabsTrigger value="breakthroughs" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-medical-blue/80 data-[state=active]:to-medical-teal/80 data-[state=active]:text-white transition-all duration-300">Recent Breakthroughs</TabsTrigger>
+            <TabsTrigger value="breakthroughs" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-medical-blue/80 data-[state=active]:to-medical-teal/80 data-[state=active]:text-white transition-all duration-300">Top Journals</TabsTrigger>
+            <TabsTrigger value="authors" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-medical-blue/80 data-[state=active]:to-medical-teal/80 data-[state=active]:text-white transition-all duration-300">Top Authors</TabsTrigger>
+            <TabsTrigger value="institutions" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-medical-blue/80 data-[state=active]:to-medical-teal/80 data-[state=active]:text-white transition-all duration-300">Top Institutions</TabsTrigger>
+            <TabsTrigger value="papers" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-medical-blue/80 data-[state=active]:to-medical-teal/80 data-[state=active]:text-white transition-all duration-300">Top Papers</TabsTrigger>
           </TabsList>
           <TabsContent value="charts" className="mt-4 animate-fade-in">
           <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Institutions</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              <CancerTypesPieChart />
-              <FundingTrendChart />
+              <PubsPer disease={selectedDisease}/>
+              <Cpj disease={selectedDisease}/>
             </div>
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Journals</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              <NumberofAuthorsPerDisease />
+              <Yearpub/>
               <FundingTrendChart />
             </div>
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Authors</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <ClinicalTrialsChart />
+              <NumberofAuthorsPerDisease />
               <SurvivalRateTrend />
             </div>
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Papers</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <ClinicalTrialsChart />
+              <Oastatus disease = {selectedDisease}/>
               <SurvivalRateTrend />
             </div>
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Important Plots</h1>
@@ -66,6 +83,15 @@ const Index = () => {
           </TabsContent>
           <TabsContent value="breakthroughs" className="mt-4 animate-fade-in">
             <RecentBreakthroughs />
+          </TabsContent>
+          <TabsContent value="authors" className="mt-4 animate-fade-in">
+            <TopAuthors />
+          </TabsContent>
+          <TabsContent value="institutions" className="mt-4 animate-fade-in">
+            <TopInstitutions />
+          </TabsContent>
+          <TabsContent value="papers" className="mt-4 animate-fade-in">
+            <TopPapers />
           </TabsContent>
         </Tabs>
       </main>

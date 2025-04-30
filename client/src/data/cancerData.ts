@@ -110,7 +110,7 @@ export const generalData = [
   {
     diseaseName: "Heart Disease",
     description: "Heart disease encompasses a variety of issues that can affect your heart's ability to send enough blood, oxygen, and nutrients to your body. This can include (but is not limited to): arrhythmias, cardiomyopathy, congenital heart disease, and coronary artery disease. Lifestyle choices such as high cholesterol, smoking, and inactivity are major risk factors. Genetics and family history can also play a large role. Symptoms can include fatigue, chest pain, swelling in the abdomen, or shortness of breath. Treatments such as medications, surgeries, or lifestyle changes can all vary based on the distinct diagnosis.",
-    cases: "805,000",
+    cases: "",
     researchStats: "6,626",
     type: "chronic",
     rarity: "common",
@@ -147,9 +147,9 @@ export const generalData = [
     curable: "❌"
   },
   {
-    diseaseName: "Leukemia",
+    diseaseName: "Cancer",
     description: "Leukemia is a form of blood cancer, one that is characterized by the rapid growth of abnormal blood cells. This surge starts in the bone marrow like most blood cells. Myeloid and Lymphoid cells develop from the basic stem cell and can develop into different kinds of red or white blood cells respectively. Leukemia occurs when this maturity stops in either of these cells before completion and multiplies rapidly, resulting in leukemia cells. Because of this, there are four main classifications of leukemia depending on the type of cell and whether it is acute or chronic. Unlike most cancers, leukemia does not form a tumor. Symptoms depend on the type, but can include fatigue, fever, shortness of breath, and bruising easily. Treatments can be done in the form of chemotherapy, targeted therapy, and bone marrow transplant.",
-    cases: "59,610",
+    cases: "225593",
     researchStats: "1,249",
     type: "varies",
     rarity: "rare",

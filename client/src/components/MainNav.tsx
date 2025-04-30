@@ -1,21 +1,23 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  Beaker,
-  Microscope,
-  TestTube,
-  Sparkles,
-} from "lucide-react";
+import { Beaker, Microscope, Sparkles } from "lucide-react";
 import {
   Select,
   SelectTrigger,
   SelectContent,
   SelectItem,
   SelectValue,
-} from "@/components/ui/select"; // adjust import if needed
+} from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 
-const MainNav = () => {
+// ✅ Define props interface
+interface MainNavProps {
+  onDiseaseChange: (value: string) => void;
+  selectedDisease: string | null;
+}
+
+// ✅ Accept props in the function component
+const MainNav: React.FC<MainNavProps> = ({ onDiseaseChange, selectedDisease }) => {
   const location = useLocation();
 
   const navItems = [
@@ -72,7 +74,7 @@ const MainNav = () => {
       </div>
 
       {/* Disease dropdown */}
-      <Select>
+      <Select onValueChange={onDiseaseChange} value={selectedDisease || ""}>
         <SelectTrigger className="w-[200px] glass border-medical-blue/20">
           <SelectValue placeholder="Select disease" />
         </SelectTrigger>
