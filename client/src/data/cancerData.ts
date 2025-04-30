@@ -108,6 +108,19 @@ export const researchBreakthroughs = [
 // General Info Data
 export const generalData = [
   {
+    diseaseName: "Cancer",
+    description: "Cancer is a group of diseases characterized by the uncontrolled growth and spread of abnormal cells in the body. It can affect virtually any organ or tissue, and if not controlled, it can invade nearby tissues and spread to other parts of the body. Causes of cancer vary and can include genetic mutations, environmental exposures (like tobacco smoke, radiation, or chemicals), infections, diet, and lifestyle factors. There are over 100 types of cancer, with some of the most common being breast, lung, prostate, colorectal, skin, and blood cancers (such as leukemia and lymphoma). Symptoms vary widely depending on the type but may include unexplained weight loss, fatigue, lumps or masses, persistent pain, or changes in bodily functions. Treatment depends on the cancer type and stage but often involves surgery, chemotherapy, radiation therapy, immunotherapy, or targeted drug therapy. Early detection and personalized treatment strategies can greatly improve outcomes.",
+    cases: "2,001,140",
+    researchStats: "27,167",
+    type: "chronic",
+    rarity: "common",
+    age: "all",
+    preventable: "✅",
+    gender: "all",
+    infectious: "❌",
+    curable: "varies"
+  },
+  {
     diseaseName: "Heart Disease",
     description: "Heart disease encompasses a variety of issues that can affect your heart's ability to send enough blood, oxygen, and nutrients to your body. This can include (but is not limited to): arrhythmias, cardiomyopathy, congenital heart disease, and coronary artery disease. Lifestyle choices such as high cholesterol, smoking, and inactivity are major risk factors. Genetics and family history can also play a large role. Symptoms can include fatigue, chest pain, swelling in the abdomen, or shortness of breath. Treatments such as medications, surgeries, or lifestyle changes can all vary based on the distinct diagnosis.",
     cases: "805,000",
@@ -147,19 +160,6 @@ export const generalData = [
     curable: "❌"
   },
   {
-    diseaseName: "Leukemia",
-    description: "Leukemia is a form of blood cancer, one that is characterized by the rapid growth of abnormal blood cells. This surge starts in the bone marrow like most blood cells. Myeloid and Lymphoid cells develop from the basic stem cell and can develop into different kinds of red or white blood cells respectively. Leukemia occurs when this maturity stops in either of these cells before completion and multiplies rapidly, resulting in leukemia cells. Because of this, there are four main classifications of leukemia depending on the type of cell and whether it is acute or chronic. Unlike most cancers, leukemia does not form a tumor. Symptoms depend on the type, but can include fatigue, fever, shortness of breath, and bruising easily. Treatments can be done in the form of chemotherapy, targeted therapy, and bone marrow transplant.",
-    cases: "59,610",
-    researchStats: "1,249",
-    type: "varies",
-    rarity: "rare",
-    age: "all",
-    preventable: "❌",
-    gender: "all",
-    infectious: "❌",
-    curable: "❌"
-  },
-  {
     diseaseName: "Diabetes",
     description: "Diabetes is a chronic medical condition that affects how the body processes blood sugar (glucose), which is the body’s main source of energy. It occurs either when the pancreas doesn't produce enough insulin (a hormone that regulates blood sugar) or when the body can't effectively use the insulin it produces. There are several types of diabetes, the most common being Type 1 (an autoimmune condition where the immune system attacks insulin-producing cells), Type 2 (linked to insulin resistance, often associated with lifestyle and genetics), and gestational diabetes, which develops during pregnancy. Common symptoms include increased thirst, frequent urination, extreme fatigue, blurred vision, and slow healing of wounds. If left untreated, diabetes can lead to serious complications such as heart disease, kidney failure, nerve damage, and vision loss. While there is no cure for diabetes, it is treatable. Type 1 diabetes requires lifelong insulin therapy, while Type 2 can often be managed or even reversed with lifestyle changes (such as diet and exercise), oral medications, and sometimes insulin. Monitoring blood sugar levels regularly and maintaining a healthy lifestyle are fundamental components of diabetes management.",
     cases: "1,200,000",
@@ -168,13 +168,13 @@ export const generalData = [
     rarity: "common",
     age: "all",
     preventable: "varies",
-    gender: "male",
+    gender: "all",
     infectious: "❌",
     curable: "❌"
   },
   {
     diseaseName: "Lymphoma",
-    description: "Lymphoma is a type of cancer that originates in the lymphatic system, which is part of the body’s immune system. It occurs when lymphocytes (a type of white blood cell) grow and multiply uncontrollably. The exact cause of lymphoma is hard to discern, but it may be linked to genetic mutations, immune system disorders, certain infections (like Epstein-Barr virus or HIV), and exposure to radiation or harmful chemicals. There are two main types: Hodgkin lymphoma and non-Hodgkin lymphoma, with non-Hodgkin being more common and diverse in its subtypes. Common symptoms include painless swelling of lymph nodes (in the neck, armpit, or groin), unexplained weight loss, fever, night sweats, fatigue, and persistent coughing or chest pain. Treatment depends on the type and stage of lymphoma but often includes chemotherapy, radiation therapy, immunotherapy, or targeted drug therapies. In some cases, stem cell transplants may be used. Many forms of lymphoma are highly treatable, especially when diagnosed early.",
+    description: "Lymphoma is a type of cancer that originates in the lymphatic system, which is part of the body’s immune system. It occurs when lymphocytes (a type of white blood cell) grow and multiply uncontrollably. The exact cause of lymphoma is hard to discern, but it may be linked to genetic mutations, immune system disorders, certain infections (like Epstein-Barr virus or HIV), and exposure to radiation or harmful chemicals. There are two main types: Hodgkin lymphoma and non-Hodgkin lymphoma, with non-Hodgkin being more common and diverse in its subtypes. Common symptoms include painless swelling of lymph nodes, unexplained weight loss, fever, fatigue, and persistent coughing or chest pain. Treatment depends on the type and stage of lymphoma but often includes chemotherapy, radiation therapy, immunotherapy, or targeted drug therapies. In some cases, stem cell transplants may be used. Many forms of lymphoma are highly treatable, especially when diagnosed early.",
     cases: "89,070",
     researchStats: "1,246",
     type: "chronic",
@@ -184,32 +184,6 @@ export const generalData = [
     gender: "all",
     infectious: "❌",
     curable: "✅"
-  },
-  {
-    diseaseName: "Sarcoma",
-    description: "Sarcoma is a rare type of cancer that develops in the body’s connective tissues, such as bones, muscles, fat, blood vessels, or cartilage. It arises when cells in these tissues grow uncontrollably due to genetic mutations, which may be spontaneous or linked to factors like radiation exposure, certain inherited conditions, or chemical exposure. There are two main categories: soft tissue sarcomas (affecting muscles, fat, nerves) and bone sarcomas (like osteosarcoma or Ewing sarcoma). Sarcomas can occur at any age but are more common in children, teens, and young adults for bone types, and in older adults for soft tissue types. Common symptoms include a painless lump, swelling, or pain if the tumor presses on nerves or muscles. Treatments depend on the type and location but often include surgery, radiation therapy, and chemotherapy. In some cases, targeted therapy or immunotherapy may be used. Early diagnosis and treatment significantly improve outcomes.",
-    cases: "13,520",
-    researchStats: "674",
-    type: "chronic",
-    rarity: "rare",
-    age: "10-30, 50+",
-    preventable: "❌",
-    gender: "all",
-    infectious: "❌",
-    curable: "varies"
-  },
-  {
-    diseaseName: "Lung Cancer",
-    description: "Lung disease refers to a broad range of conditions that affect the lungs and hinder breathing. Common causes include smoking, air pollution, occupational exposures, infections, genetic factors, and autoimmune diseases. Major types of lung disease include chronic obstructive pulmonary disease (COPD), asthma, lung cancer, and infections like pneumonia or tuberculosis. Symptoms vary by type but often include shortness of breath, chronic cough, wheezing, chest pain, and fatigue. Treatment options depend on the specific disease and severity, but may include inhalers, oxygen therapy, steroids, antibiotics, pulmonary rehabilitation, and surgery in some cases. Lifestyle changes such as quitting smoking and avoiding harmful exposures are crucial both for treatment and prevention. Early diagnosis and consistent medical care can greatly improve outcomes.",
-    cases: "235,000",
-    researchStats: "2,789",
-    type: "chronic",
-    rarity: "rare",
-    age: "60+",
-    preventable: "✅",
-    gender: "all",
-    infectious: "❌",
-    curable: "varies"
   },
   {
     diseaseName: "Bronchitis",
