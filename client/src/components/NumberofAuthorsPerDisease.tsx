@@ -10,7 +10,7 @@ import {
 } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-export default function ClinicalTrialsChart() {
+export default function NumberofAuthorsPerDisease() {
   const [data, setData] = useState({
     clinical_trials_data: []
   });

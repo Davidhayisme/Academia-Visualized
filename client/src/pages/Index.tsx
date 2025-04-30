@@ -6,6 +6,7 @@ import KeyStatistics from "@/components/KeyStatistics";
 import CancerTypesPieChart from "@/components/CancerTypesPieChart";
 import FundingTrendChart from "@/components/FundingTrendChart";
 import ClinicalTrialsChart from "@/components/ClinicalTrialsChart";
+import NumberofAuthorsPerDisease from "@/components/NumberofAuthorsPerDisease";
 import SurvivalRateTrend from "@/components/SurvivalRateTrend";
 import RecentBreakthroughs from "@/components/RecentBreakthroughs";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -31,11 +32,6 @@ const Index = () => {
             <p className="text-white/80">Comprehensive insights and analytics for cancer research progress</p>
           </div>
         </section>
-        
-        <section className="mb-8">
-          <h2 className="text-xl font-bold mb-4 text-medical-blue">Research Overview</h2>
-          <KeyStatistics />
-        </section>
 
         <Tabs defaultValue="charts" className="mb-8">
           <TabsList className="grid w-full grid-cols-2 backdrop-blur-sm bg-white/50">
@@ -43,11 +39,27 @@ const Index = () => {
             <TabsTrigger value="breakthroughs" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-medical-blue/80 data-[state=active]:to-medical-teal/80 data-[state=active]:text-white transition-all duration-300">Recent Breakthroughs</TabsTrigger>
           </TabsList>
           <TabsContent value="charts" className="mt-4 animate-fade-in">
+          <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Institutions</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
               <CancerTypesPieChart />
               <FundingTrendChart />
             </div>
-            
+            <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Journals</h1>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+              <NumberofAuthorsPerDisease />
+              <FundingTrendChart />
+            </div>
+            <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Authors</h1>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <ClinicalTrialsChart />
+              <SurvivalRateTrend />
+            </div>
+            <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Papers</h1>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <ClinicalTrialsChart />
+              <SurvivalRateTrend />
+            </div>
+            <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Important Plots</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <ClinicalTrialsChart />
               <SurvivalRateTrend />

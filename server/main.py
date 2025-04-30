@@ -43,7 +43,8 @@ clinical_trials_data = [
     {"name": "Phase 1", "value": 358},
     {"name": "Phase 2", "value": 724},
     {"name": "Phase 3", "value": 413},
-    {"name": "Phase 4", "value": 296}
+    {"name": "Phase 4", "value": 296},
+    {"name": "Phase 5", "value": 190}
 ]
 
 survival_rate_data = [

@@ -9,14 +9,14 @@ const MainNav = () => {
   
   const navItems = [
     { 
-      name: "Dashboard", 
-      path: "/", 
-      icon: <Beaker className="h-5 w-5 mr-2" /> 
-    },
-    { 
       name: "Research Areas", 
       path: "/research-areas", 
       icon: <Microscope className="h-5 w-5 mr-2" /> 
+    },
+    { 
+      name: "Dashboard", 
+      path: "/", 
+      icon: <Beaker className="h-5 w-5 mr-2" /> 
     }
   ];
 

@@ -5,23 +5,17 @@ import { Badge } from "@/components/ui/badge";
 export default function RecentBreakthroughs() {
   const [rdata, setrdata] = useState<{ title: string; date: string; description: string; impact: string; institution: string; }[]>([]);
   useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL;
+    const apiUrl = import.meta.env.VITE_API_URL+"/topjournals";
+    console.log(apiUrl)
     fetch(apiUrl)
       .then((response) => response.json())
       .then((rawData) => {
+        console.log(rawData);
         let parsedData = rawData;
 
         // If we have a 'body', it probably needs to be parsed
-        if (parsedData.body) {
-          try {
-            parsedData = JSON.parse(parsedData.body);
-          } catch (e) {
-            console.error("Failed to parse body string:", e);
-            parsedData = {};
-          }
-        }
 
-        if (parsedData && Array.isArray(parsedData.cancer_types_data)) {
+        if (parsedData && Array.isArray(parsedData.recent_breakthrough_data)) {
           setrdata(parsedData.recent_breakthrough_data);
         } else {
           console.error("recent_types_data not found or not an array.");
