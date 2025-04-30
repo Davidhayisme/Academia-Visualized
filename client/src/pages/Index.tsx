@@ -18,6 +18,7 @@ import PubsPer from "@/components/PubsPerJournal";
 import TopAuthors from "@/components/TopAuthors";
 import TopInstitutions from "@/components/TopInstitutions";
 import TopPapers from "@/components/TopPapers";
+import Ppi from "@/components/PubsPerInstitutions";
 
 // Import other components here as needed
 
@@ -58,12 +59,12 @@ const Index = () => {
           <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Institutions</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
               <PubsPer disease={selectedDisease}/>
-              <Cpj disease={selectedDisease}/>
+              <Ppi disease={selectedDisease}/>
             </div>
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Journals</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              <Yearpub/>
-              <FundingTrendChart />
+              <PubsPer disease={selectedDisease}/>
+              <Cpj disease={selectedDisease}/>
             </div>
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Authors</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -73,7 +74,7 @@ const Index = () => {
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Papers</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <Oastatus disease = {selectedDisease}/>
-              <SurvivalRateTrend />
+              <Yearpub/>
             </div>
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Important Plots</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

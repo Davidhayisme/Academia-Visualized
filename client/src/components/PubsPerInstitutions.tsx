@@ -45,14 +45,14 @@ export default function Ppi({ disease }: OastatusProps) {
   return (
     <Card className="data-card">
       <CardHeader className="pb-2">
-        <CardTitle className="text-lg font-medium">Publications Per Journal</CardTitle>
+        <CardTitle className="text-lg font-medium">Publications Per Institution</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={rdata}
-              margin={{ top: 5, right: 5, left: 5, bottom: 50 }}
+              margin={{ top: 5, right: 5, left: 5, bottom: 80 }}
             >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" angle={-30} textAnchor="end" interval={0} tick={{ dy: 10 }} />

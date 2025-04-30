@@ -39,7 +39,7 @@ export default function NumberofAuthorsPerDisease() {
   return (
     <Card className="data-card">
       <CardHeader className="pb-2">
-        <CardTitle className="text-lg font-medium">Clinical Trials by Phase</CardTitle>
+        <CardTitle className="text-lg font-medium">Number of Authors per Disease</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="h-[300px]">
