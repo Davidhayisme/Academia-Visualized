@@ -17,8 +17,6 @@ top authors: (openalexid , author name , number_publications, number_citations)
     Alzheimers:
         [('https://openalex.org/A5063630764', 'John C. Morris', 816, Decimal('165269')), ('https://openalex.org/A5021394368', 'John Q. Trojanowski', 679, Decimal('144727')), ('https://openalex.org/A5025313057', 'Kaj Blennow', 1208, Decimal('142556')), ('https://openalex.org/A5005099850', 'Clifford R. Jack', 715, Decimal('140864')), ('https://openalex.org/A5025870220', 'Philip Scheltens', 893, Decimal('138374'))]
 
-    Cancer:
-
 OA Categories: 
     Bronchitis:
         # [('bronze', 2318), ('closed', 19377), ('diamond', 73), ('gold', 799), ('green', 823), ('hybrid', 307)]
@@ -32,7 +30,6 @@ OA Categories:
         # [('bronze', 45750), ('closed', 254411), ('diamond', 1491), ('gold', 25836), ('green', 15958), ('hybrid', 11436)]
     Sarcoma:
         # [('bronze', 16899), ('closed', 116311), ('diamond', 687), ('gold', 10469), ('green', 7668), ('hybrid', 3864)]
-    Cancer:
 
 publications by year:
     Covid:
@@ -47,7 +44,6 @@ publications by year:
         # [(Decimal('1990'), 5211), (Decimal('1991'), 5015), (Decimal('1992'), 5212), (Decimal('1993'), 5185), (Decimal('1994'), 5427), (Decimal('1995'), 5544), (Decimal('1996'), 5657), (Decimal('1997'), 5765), (Decimal('1998'), 5831), (Decimal('1999'), 5898), (Decimal('2000'), 6433), (Decimal('2001'), 6364), (Decimal('2002'), 6778), (Decimal('2003'), 7314), (Decimal('2004'), 7157), (Decimal('2005'), 7739), (Decimal('2006'), 7842), (Decimal('2007'), 8204), (Decimal('2008'), 8735), (Decimal('2009'), 8438), (Decimal('2010'), 8934), (Decimal('2011'), 9499), (Decimal('2012'), 9543), (Decimal('2013'), 10051), (Decimal('2014'), 10195), (Decimal('2015'), 10565), (Decimal('2016'), 9581), (Decimal('2017'), 9140), (Decimal('2018'), 9243), (Decimal('2019'), 9067), (Decimal('2020'), 7519), (Decimal('2021'), 7860), (Decimal('2022'), 8085), (Decimal('2023'), 7627), (Decimal('2024'), 6447), (Decimal('2025'), 690)]
     Sarcoma
         # [(Decimal('1990'), 2369), (Decimal('1991'), 2327), (Decimal('1992'), 2223), (Decimal('1993'), 2334), (Decimal('1994'), 2299), (Decimal('1995'), 2489), (Decimal('1996'), 2499), (Decimal('1997'), 2523), (Decimal('1998'), 2508), (Decimal('1999'), 2469), (Decimal('2000'), 2499), (Decimal('2001'), 2494), (Decimal('2002'), 2509), (Decimal('2003'), 2738), (Decimal('2004'), 2702), (Decimal('2005'), 2859), (Decimal('2006'), 2769), (Decimal('2007'), 2878), (Decimal('2008'), 2927), (Decimal('2009'), 2908), (Decimal('2010'), 2979), (Decimal('2011'), 3119), (Decimal('2012'), 3024), (Decimal('2013'), 3262), (Decimal('2014'), 3439), (Decimal('2015'), 3493), (Decimal('2016'), 3150), (Decimal('2017'), 3220), (Decimal('2018'), 3270), (Decimal('2019'), 3300), (Decimal('2020'), 2894), (Decimal('2021'), 3062), (Decimal('2022'), 3497), (Decimal('2023'), 3072), (Decimal('2024'), 2479), (Decimal('2025'), 302)]
-    Cancer:
 
 
 Total publications:
@@ -83,8 +79,6 @@ Top5 papers: (openalex_id , article title, citation number, )
     
     Alzeihmers:
         [('https://openalex.org/W1847168837', '“Mini-mental state”', Decimal('83427')), ('https://openalex.org/W2156220037', "Clinical diagnosis of Alzheimer's disease", Decimal('27429')), ('https://openalex.org/W2165758561', 'The Montreal Cognitive Assessment, MoCA: A Brief Screening Tool For Mild Cognitive Impairment', Decimal('20695')), ('https://openalex.org/W2058161128', 'Normative data on a battery of neuropsychological tests in the Han Chinese population', Decimal('20472')), ('https://openalex.org/W2148080316', 'Special Care Units and Traditional Care in Dementia: Relationship with Behavior, Cognition, Functional Status and Quality of Life - A Review', Decimal('20231'))]
-    
-    Cancer:
 
 
 
@@ -102,11 +96,10 @@ Top Institutions by citations: (openalexid , institution name, publication numbe
     Sarcoma
         [('https://openalex.org/I136199984', 'Harvard University', 624, Decimal('53636')), ('https://openalex.org/I1334819555', 'Memorial Sloan Kettering Cancer Center', 583, Decimal('48435')), ('https://openalex.org/I1343551460', 'The University of Texas MD Anderson Cancer Center', 573, Decimal('36573')), ('https://openalex.org/I4210140884', 'National Cancer Institute', 384, Decimal('33877')), ('https://openalex.org/I1283280774', "Brigham and Women's Hospital", 263, Decimal('29756')), ('https://openalex.org/I1299303238', 'National Institutes of Health', 231, Decimal('25117')), ('https://openalex.org/I4210087915', 'Massachusetts General Hospital', 360, Decimal('24681')), ('https://openalex.org/I154526488', 'Inserm', 338, Decimal('20788')), ('https://openalex.org/I1330342723', 'Mayo Clinic', 249, Decimal('15912')), ('https://openalex.org/I145311948', 'Johns Hopkins University', 219, Decimal('15138'))]
         Ran in 167.66896557807922 seconds
-    Cancer:
 
 
 Top Institutions by publications: (openalexid , institution name, publication number, citation number)
-     
+    
 
 Number authors
     Bronchitis:
@@ -116,12 +109,11 @@ Number authors
     Alzheimer's:
         469147
     Diabetes:
-
+        1875978
     lymphoma:
-
+        654327
     Sarcoma:
-
-    cancer:
+        417893
 
 
 Journal_Number_Publications: (journal_name : number publications)
@@ -137,12 +129,6 @@ Journal_Number_Publications: (journal_name : number publications)
 
     Sarcoma:
 
-    Cancer:
-
-
-
-
-Journal_Number_Citations: (journal_name : citations)
 
 
 
