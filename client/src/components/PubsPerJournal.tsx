@@ -46,7 +46,7 @@ export default function PubsPer({ disease }: OastatusProps) {
   return (
     <Card className="data-card">
       <CardHeader className="pb-2">
-        <CardTitle className="text-lg font-medium">Citations Per Journal</CardTitle>
+        <CardTitle className="text-lg font-medium">Publications Per Journal</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="h-[300px]">

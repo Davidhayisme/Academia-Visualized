@@ -14,7 +14,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export default function yearpub() {
 
   // Fetch data from Flask API using fetch
-  const [rdata, setrdata] = useState<{ year: string; covid: number; flu: number; mal: number; tube: number; aids: number }[]>([]);
+  const [rdata, setrdata] = useState<{ year: string; covid: number; flu: number; mal: number; tube: number; aids: number; sarcoma: number; }[]>([]);
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_API_URL+"/yearpub";
     console.log(apiUrl)
@@ -53,11 +53,12 @@ export default function yearpub() {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="COVID-19" stroke="#8884d8" name="COVID-19" />
-            <Line type="monotone" dataKey="Influenza" stroke="#82ca9d" name="Influenza" />
-            <Line type="monotone" dataKey="Malaria" stroke="#ffc658" name="Malaria" />
-            <Line type="monotone" dataKey="Tuberculosis" stroke="#ff7300" name="Tuberculosis" />
-            <Line type="monotone" dataKey="HIV/AIDS" stroke="#d62728" name="HIV/AIDS" />
+            <Line type="monotone" dataKey="Covid"        stroke="#8884d8" name="Covid" />
+            <Line type="monotone" dataKey="Bronchitis"   stroke="#82ca9d" name="Bronchitis" />
+            <Line type="monotone" dataKey="Alzheimer's"  stroke="#ffc658" name="Alzheimer's" />
+            <Line type="monotone" dataKey="Diabetes"     stroke="#ff7300" name="Diabetes" />
+            <Line type="monotone" dataKey="Lymphoma"     stroke="#d62728" name="Lymphoma" />
+            <Line type="monotone" dataKey="Sarcoma"      stroke="#00aaff" name="Sarcoma" />
           </LineChart>
           </ResponsiveContainer>
         </div>

@@ -22,7 +22,7 @@ const MainNav: React.FC<MainNavProps> = ({ onDiseaseChange, selectedDisease }) =
 
   const navItems = [
     {
-      name: "Research Areas",
+      name: "General Disease Info",
       path: "/",
       icon: <Microscope className="h-5 w-5 mr-2" />,
     },
@@ -35,13 +35,12 @@ const MainNav: React.FC<MainNavProps> = ({ onDiseaseChange, selectedDisease }) =
 
   const diseases = [
     "Cancer",
-    "HeartDisease",
+    "Sarcoma",
     "Covid",
     "Alzheimers",
     "Diabetes",
     "Lymphoma",
     "Bronchitis",
-    "LiverDisease",
   ];
 
   return (

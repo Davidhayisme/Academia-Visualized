@@ -36,7 +36,7 @@ export default function TopAuthors({disease}: OastatusProps) {
   return (
     <Card className="data-card">
       <CardHeader>
-        <CardTitle>Recent Research Breakthroughs</CardTitle>
+        <CardTitle>Top Authors</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">

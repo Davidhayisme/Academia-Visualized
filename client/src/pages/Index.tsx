@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import MainNav from "@/components/MainNav";
-import KeyStatistics from "@/components/KeyStatistics";
-import CancerTypesPieChart from "@/components/CancerTypesPieChart";
 import FundingTrendChart from "@/components/FundingTrendChart";
 import ClinicalTrialsChart from "@/components/ClinicalTrialsChart";
 import NumberofAuthorsPerDisease from "@/components/NumberofAuthorsPerDisease";
@@ -19,6 +17,7 @@ import TopAuthors from "@/components/TopAuthors";
 import TopInstitutions from "@/components/TopInstitutions";
 import TopPapers from "@/components/TopPapers";
 import Ppi from "@/components/PubsPerInstitutions";
+import Cpi from "@/components/CitationsPerInstitution";
 
 // Import other components here as needed
 
@@ -39,11 +38,12 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-medical-blue/20 to-medical-teal/20 blur-xl transform group-hover:scale-105 transition-all duration-1000 rounded-xl"></div>
           <div className="bg-gradient-to-r from-medical-blue to-medical-teal rounded-lg p-6 shadow-lg relative overflow-hidden backdrop-blur-sm">
             <div className="absolute -right-12 -top-12 h-40 w-40 bg-white opacity-20 rounded-full blur-2xl"></div>
-            <h2 className="text-2xl font-bold mb-4 text-white flex items-center">
-              Cancer Research Dashboard
-              <Sparkles className="ml-2 h-5 w-5 text-yellow-200" />
-            </h2>
-            <p className="text-white/80">Comprehensive insights and analytics for cancer research progress</p>
+            <h2 className="text-lg font-bold mb-4 text-white flex items-center">
+  {selectedDisease
+    ? `${selectedDisease.charAt(0).toUpperCase()}${selectedDisease.slice(1)} Research Dashboard`
+    : "Cancer Research Dashboard"}
+</h2>
+            <p className="text-white/80">Comprehensive insights and analytics for all research progress</p>
           </div>
         </section>
 
@@ -58,7 +58,7 @@ const Index = () => {
           <TabsContent value="charts" className="mt-4 animate-fade-in">
           <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Institutions</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              <PubsPer disease={selectedDisease}/>
+              <Cpi disease={selectedDisease}/>
               <Ppi disease={selectedDisease}/>
             </div>
             <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Journals</h1>
@@ -75,11 +75,6 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <Oastatus disease = {selectedDisease}/>
               <Yearpub/>
-            </div>
-            <h1 className="text-4xl font-bold mb-4 text-medical-blue text-center">Important Plots</h1>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <ClinicalTrialsChart />
-              <SurvivalRateTrend />
             </div>
           </TabsContent>
           <TabsContent value="breakthroughs" className="mt-4 animate-fade-in">

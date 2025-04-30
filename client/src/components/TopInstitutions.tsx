@@ -36,7 +36,7 @@ export default function TopInstitutions({disease}: OastatusProps) {
   return (
     <Card className="data-card">
       <CardHeader>
-        <CardTitle>Recent Research Breakthroughs</CardTitle>
+        <CardTitle>Top Institutions</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">

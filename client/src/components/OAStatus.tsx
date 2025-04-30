@@ -46,7 +46,7 @@ export default function Oastatus({ disease }: OastatusProps) {
   return (
     <Card className="data-card">
       <CardHeader className="pb-2">
-        <CardTitle className="text-lg font-medium">Clinical Trials by Phase</CardTitle>
+        <CardTitle className="text-lg font-medium">Open Access Status</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="h-[300px]">

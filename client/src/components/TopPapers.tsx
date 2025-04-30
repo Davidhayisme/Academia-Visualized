@@ -7,7 +7,7 @@ interface OastatusProps {
 }
 
 export default function TopPapers({disease}: OastatusProps) {
-  const [rdata, setrdata] = useState<{ title: string; date: string; description: string; impact:string; institution:string; }[]>([]);
+  const [rdata, setrdata] = useState<{ hyperlink: string; name: string; association: number;}[]>([]);
   useEffect(() => {
     if (!disease) return;
 
@@ -36,7 +36,7 @@ export default function TopPapers({disease}: OastatusProps) {
   return (
     <Card className="data-card">
       <CardHeader>
-        <CardTitle>Recent Research Breakthroughs</CardTitle>
+        <CardTitle>Top Papers</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
@@ -46,16 +46,10 @@ export default function TopPapers({disease}: OastatusProps) {
               className="p-4 border border-border rounded-md hover:border-primary transition-colors"
             >
               <div className="flex justify-between items-start">
-                <h3 className="font-medium text-medical-blue">{item.title}</h3>
-                <Badge 
-                  variant={item.impact === "high" ? "default" : "outline"}
-                  className={item.impact === "high" ? "bg-medical-teal" : ""}
-                >
-                  {item.impact} impact
-                </Badge>
+                <h3 className="font-medium text-medical-blue">{item.name}</h3>
               </div>
-              <p className="text-sm text-muted-foreground mt-1">{item.date} • {item.institution}</p>
-              <p className="mt-2 text-sm">{item.description}</p>
+              <p className="text-sm text-muted-foreground mt-1">{item.hyperlink}</p>
+              <p className="mt-2 text-sm">Number of Citations: {item.association}</p>
             </div>
           ))}
         </div>
