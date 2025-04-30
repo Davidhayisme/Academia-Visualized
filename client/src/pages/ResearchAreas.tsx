@@ -26,7 +26,6 @@ export default function ResearchAreas() {
 
   return (
     <div className="container mx-auto px-4 py-6 max-w-7xl animate-fade-in">
-      <Header />
       <div className="mt-6">
         <MainNav />
       </div>
