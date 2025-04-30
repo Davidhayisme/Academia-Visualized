@@ -7,7 +7,7 @@ interface OastatusProps {
 }
 
 export default function TopAuthors({disease}: OastatusProps) {
-  const [rdata, setrdata] = useState<{ title: string; date: string; description: string; impact:string; institution:string; }[]>([]);
+  const [rdata, setrdata] = useState<{ name: string; hyperlink: string; value:number;}[]>([]);
   useEffect(() => {
     if (!disease) return;
 
@@ -46,16 +46,11 @@ export default function TopAuthors({disease}: OastatusProps) {
               className="p-4 border border-border rounded-md hover:border-primary transition-colors"
             >
               <div className="flex justify-between items-start">
-                <h3 className="font-medium text-medical-blue">{item.title}</h3>
-                <Badge 
-                  variant={item.impact === "high" ? "default" : "outline"}
-                  className={item.impact === "high" ? "bg-medical-teal" : ""}
-                >
-                  {item.impact} impact
-                </Badge>
+                <h3 className="font-medium text-medical-blue">{item.name}</h3>
+          
               </div>
-              <p className="text-sm text-muted-foreground mt-1">{item.date} • {item.institution}</p>
-              <p className="mt-2 text-sm">{item.description}</p>
+              <p className="text-sm text-muted-foreground mt-1">{item.hyperlink}</p>
+              <p className="mt-2 text-sm">Number of Citations: {item.value}</p>
             </div>
           ))}
         </div>
